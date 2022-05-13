@@ -1,12 +1,17 @@
+import React from "react";
 import ReactDom from "react-dom";
-import Header from "./Header";
-import Footer from "./Footer";
+import AppScreen from "./components/AppScreen";
+import "./assets/styles/reset.css";
+import "./assets/styles/style.css";
+import WelcomeScreen from "./components/WelcomeScreen/WelcomeScreen";
 
 function App() {
+
+    const [init, setInit] = React.useState(false);
+
     return(
         <>
-            <Header />
-            <Footer />
+            { !init ? <WelcomeScreen setInit={setInit} /> : <AppScreen />}
         </>
     );
 }

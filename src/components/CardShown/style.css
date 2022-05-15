@@ -1,0 +1,18 @@
+.question {
+    height: 130px;
+    justify-content: space-between;
+    align-items: initial;
+    cursor: default;
+
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.question img {
+    width: 30px;
+    height: 20px;
+    margin-top: 75px;
+
+    cursor: pointer;
+}

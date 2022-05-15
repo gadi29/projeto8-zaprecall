@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import QuestionHide from "../QuestionHide/QuestionHide";
+import QuestionHide from "./QuestionHide/QuestionHide";
 
 export default function Container(props) {
     

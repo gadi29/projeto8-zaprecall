@@ -2,6 +2,10 @@ import Header from "./Header/Header";
 import Container from "./Container/Container";
 import Footer from "./Footer/Footer";
 
+function sortear() {
+    return Math.random() - 0.5;
+}
+
 export default function AppScreen() {
     const questions = [
         {question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"},
@@ -14,6 +18,8 @@ export default function AppScreen() {
         {question:"Usamos estado (state) para __", answer:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"},
     ]
     
+    questions.sort(sortear);
+
     return (
         <>
             <Header />

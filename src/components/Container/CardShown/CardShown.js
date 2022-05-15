@@ -1,12 +1,10 @@
 import React from "react"
-import "./style.css";
-import CardHide from "../CardHide/CardHide";
 import setinha from "../../../assets/images/setinha.png"
 
 function Button(props) {
     return(
         <>
-            <button onClick={() => <CardHide type={props.class} class={props.cardClass}/>} className={props.class}>
+            <button onClick={() => {props.setHide(true); props.setType(props.class); props.setAnswered(props.answered + 1)}} className={props.class}>
                 {props.text}
             </button>
         </>
@@ -28,9 +26,9 @@ export default function CardShown(props) {
             <div className="card question answer">
                 {cardQuest.answer}
                 <div className="buttons">
-                    <Button text="Não lembrei" class="red" cardClass="card red" />
-                    <Button text="Quase não lembrei" class="orange" cardClass="card orange" />
-                    <Button text="Zap!" class="green" cardClass="card green" />
+                    <Button text="Não lembrei" class="red" setHide={props.setHide} setType={props.setType} setAnswered={props.setAnswered} answered={props.answered} />
+                    <Button text="Quase não lembrei" class="orange" setHide={props.setHide} setType={props.setType} setAnswered={props.setAnswered} answered={props.answered} />
+                    <Button text="Zap!" class="green" setHide={props.setHide} setType={props.setType} setAnswered={props.setAnswered} answered={props.answered} />
                 </div>
             </div>
             }

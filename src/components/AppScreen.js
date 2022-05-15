@@ -1,3 +1,4 @@
+import React from "react"
 import Header from "./Header/Header";
 import Container from "./Container/Container";
 import Footer from "./Footer/Footer";
@@ -20,11 +21,13 @@ export default function AppScreen() {
     
     questions.sort(sortear);
 
+    const [answered, setAnswered] = React.useState(0);
+
     return (
         <>
             <Header />
-            <Container questions={questions}/>
-            <Footer questions={questions}/>
+            <Container questions={questions} setAnswered={setAnswered} answered={answered} />
+            <Footer questions={questions} answered={answered} />
         </>
     );
 }

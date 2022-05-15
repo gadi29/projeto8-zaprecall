@@ -8,7 +8,7 @@ export default function Container(props) {
 
     return (
         <div className="container">
-            { questions.map((question, index) => <QuestionHide index={index} key={index} question={question} />) }
+            { questions.map((question, index) => <QuestionHide index={index} key={index} question={question} setAnswered={props.setAnswered} answered={props.answered} />) }
         </div>
     );
 }

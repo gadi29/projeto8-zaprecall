@@ -6,7 +6,7 @@ export default function Footer(props) {
     
     return (
         <div className="footer">
-            <h2>0/{questions.length} CONCLUÍDOS</h2>
+            <h2>{props.answered}/{questions.length} CONCLUÍDOS</h2>
         </div>
     );
 }

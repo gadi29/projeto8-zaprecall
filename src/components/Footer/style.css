@@ -39,3 +39,17 @@
 .footer img {
     width: 23px;
 }
+
+.finished button {
+    width: 170px;
+    height: 32px;
+    margin-top: 20px;
+
+    background-color: #FB6B6B;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+    color: #FFFFFF;
+}

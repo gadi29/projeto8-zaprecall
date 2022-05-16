@@ -1,7 +1,16 @@
-import React from "react"
-import setinha from "../../../assets/images/setinha.png"
+import React from "react";
+import setinha from "../../../assets/images/setinha.png";
 
 function Button(props) {
+    if (props.class === "red") {
+        return(
+            <>
+                <button onClick={() => {props.setHide(true); props.setType(props.class); props.setAnswered(props.answered + 1); props.setWrong(props.wrong + 1)}} className={props.class}>
+                    {props.text}
+                </button>
+            </>
+        );
+    }
     return(
         <>
             <button onClick={() => {props.setHide(true); props.setType(props.class); props.setAnswered(props.answered + 1)}} className={props.class}>
@@ -26,7 +35,7 @@ export default function CardShown(props) {
             <div className="card question answer">
                 {cardQuest.answer}
                 <div className="buttons">
-                    <Button text="Não lembrei" class="red" setHide={props.setHide} setType={props.setType} setAnswered={props.setAnswered} answered={props.answered} />
+                    <Button text="Não lembrei" class="red" setHide={props.setHide} setType={props.setType} setAnswered={props.setAnswered} answered={props.answered} setWrong={props.setWrong} wrong={props.wrong} />
                     <Button text="Quase não lembrei" class="orange" setHide={props.setHide} setType={props.setType} setAnswered={props.setAnswered} answered={props.answered} />
                     <Button text="Zap!" class="green" setHide={props.setHide} setType={props.setType} setAnswered={props.setAnswered} answered={props.answered} />
                 </div>

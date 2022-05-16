@@ -22,12 +22,13 @@ export default function AppScreen() {
     questions.sort(sortear);
 
     const [answered, setAnswered] = React.useState(0);
+    const [wrong, setWrong] = React.useState(0);
 
     return (
         <>
             <Header />
-            <Container questions={questions} setAnswered={setAnswered} answered={answered} />
-            <Footer questions={questions} answered={answered} />
+            <Container questions={questions} setAnswered={setAnswered} answered={answered} setWrong={setWrong} wrong={wrong} />
+            <Footer questions={questions} setAnswered={setAnswered} answered={answered} setWrong={setWrong} wrong={wrong} />
         </>
     );
 }
